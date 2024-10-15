@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.2.0
+%define		kdeplasmaver	6.2.1
 %define		qtver		5.15.2
 %define		kpname		plasma-sdk
 
 Summary:	KDE Plasma Desktop
 Name:		kp6-%{kpname}
-Version:	6.2.0
+Version:	6.2.1
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	bf3aa695d399a483541e161109a1aae6
+# Source0-md5:	aca34f2c45470c0866a399753c7a00b3
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -178,8 +178,8 @@ rm -rf $RPM_BUILD_ROOT
 %{zsh_compdir}/_plasmoidviewer
 
 %attr(755,root,root) %{_bindir}/iconexplorer
-%attr(755,root,root)%{_bindir}/kqml
-%attr(755,root,root)%{_libdir}/qt6/plugins/ktexteditor/iconexplorerplugin.so
+%attr(755,root,root) %{_bindir}/kqml
+%attr(755,root,root) %{_libdir}/qt6/plugins/ktexteditor/iconexplorerplugin.so
 %{_desktopdir}/org.kde.iconexplorer.desktop
 %{_mandir}/man1/kqml.1*
 %{_datadir}/metainfo/org.kde.plasma.iconexplorer.appdata.xml
