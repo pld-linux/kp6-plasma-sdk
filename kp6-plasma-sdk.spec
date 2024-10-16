@@ -11,7 +11,7 @@
 Summary:	KDE Plasma Desktop
 Name:		kp6-%{kpname}
 Version:	6.2.1
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -36,6 +36,7 @@ BuildRequires:	kf6-krunner-devel
 BuildRequires:	kf6-kwallet-devel
 BuildRequires:	kp6-libplasma-devel >= %{version}
 BuildRequires:	kp6-plasma-activities-stats-devel >= %{version}
+BuildRequires:	kp6-plasma5support-devel >= %{version}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	xorg-driver-input-evdev-devel
