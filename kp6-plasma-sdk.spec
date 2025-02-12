@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.2.5
+%define		kdeplasmaver	6.3.0
 %define		qtver		5.15.2
 %define		kpname		plasma-sdk
 
 Summary:	KDE Plasma Desktop
 Name:		kp6-%{kpname}
-Version:	6.2.5
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	f4ff034807a0f34c16806091091dfe80
+# Source0-md5:	e5c7c53625c905182c0df49a5650771d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -133,6 +133,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/fakecontrols/LineEdit.qml
 %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/main.qml
 %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/metadata.json
+%{_mandir}/man1/kqml.1*
 %{_mandir}/man1/plasmaengineexplorer.1*
 %{_mandir}/man1/plasmoidviewer.1*
 %{_datadir}/metainfo/org.kde.plasma.lookandfeelexplorer.appdata.xml
@@ -144,12 +145,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/metainfo/org.kde.plasmaengineexplorer.appdata.xml
 %{_datadir}/metainfo/org.kde.plasmoidviewer.appdata.xml
 
+%lang(ca) %{_mandir}/ca/man1/kqml.1*
 %lang(ca) %{_mandir}/ca/man1/plasmaengineexplorer.1*
 %lang(ca) %{_mandir}/ca/man1/plasmoidviewer.1*
 %lang(de) %{_mandir}/de/man1/plasmaengineexplorer.1*
 %lang(de) %{_mandir}/de/man1/plasmoidviewer.1*
 %lang(el) %{_mandir}/el/man1/plasmaengineexplorer.1*
 %lang(el) %{_mandir}/el/man1/plasmoidviewer.1*
+%lang(es) %{_mandir}/es/man1/kqml.1*
 %lang(es) %{_mandir}/es/man1/plasmaengineexplorer.1*
 %lang(es) %{_mandir}/es/man1/plasmoidviewer.1*
 %lang(et) %{_mandir}/et/man1/plasmaengineexplorer.1*
@@ -158,8 +161,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(fr) %{_mandir}/fr/man1/plasmoidviewer.1*
 %lang(id) %{_mandir}/id/man1/plasmaengineexplorer.1*
 %lang(id) %{_mandir}/id/man1/plasmoidviewer.1*
+%lang(it) %{_mandir}/it/man1/kqml.1*
 %lang(it) %{_mandir}/it/man1/plasmaengineexplorer.1*
 %lang(it) %{_mandir}/it/man1/plasmoidviewer.1*
+%lang(nl) %{_mandir}/nl/man1/kqml.1*
 %lang(nl) %{_mandir}/nl/man1/plasmaengineexplorer.1*
 %lang(nl) %{_mandir}/nl/man1/plasmoidviewer.1*
 %lang(pt) %{_mandir}/pt/man1/plasmaengineexplorer.1*
@@ -174,6 +179,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{_mandir}/sv/man1/plasmoidviewer.1*
 %lang(tr) %{_mandir}/tr/man1/plasmaengineexplorer.1*
 %lang(tr) %{_mandir}/tr/man1/plasmoidviewer.1*
+%lang(uk) %{_mandir}/uk/man1/kqml.1*
 %lang(uk) %{_mandir}/uk/man1/plasmaengineexplorer.1*
 %lang(uk) %{_mandir}/uk/man1/plasmoidviewer.1*
 %{zsh_compdir}/_plasmoidviewer
@@ -182,6 +188,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kqml
 %attr(755,root,root) %{_libdir}/qt6/plugins/ktexteditor/iconexplorerplugin.so
 %{_desktopdir}/org.kde.iconexplorer.desktop
-%{_mandir}/man1/kqml.1*
+%{_iconsdir}/hicolor/scalable/apps/org.kde.iconexplorer.svg
 %{_datadir}/metainfo/org.kde.plasma.iconexplorer.appdata.xml
 %{zsh_compdir}/_kqml
