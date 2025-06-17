@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.3.5
+%define		kdeplasmaver	6.4.0
 %define		qtver		5.15.2
 %define		kpname		plasma-sdk
 
 Summary:	KDE Plasma Desktop
 Name:		kp6-%{kpname}
-Version:	6.3.5
+Version:	6.4.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	018a87c99b2507e97a3ac477e7258371
+# Source0-md5:	f214a6be67ef14e2fd8887bbf055d654
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -90,16 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/plasmaengineexplorer
 %attr(755,root,root) %{_bindir}/plasmathemeexplorer
 %attr(755,root,root) %{_bindir}/plasmoidviewer
-%dir %{_libdir}/qt6/plugins/ktexteditor
-%{_desktopdir}/org.kde.plasma.themeexplorer.desktop
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer/contents
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer/contents/ui
-%{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer/contents/ui/FormField.qml
-
-%{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer/contents/ui/MetadataEditor.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer/contents/ui/main.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.lookandfeelexplorer/metadata.json
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/ktexteditor/iconexplorerplugin.so
 %dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer
 %dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents
 %dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/code
@@ -142,7 +133,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/kqml.1*
 %{_mandir}/man1/plasmaengineexplorer.1*
 %{_mandir}/man1/plasmoidviewer.1*
-%{_datadir}/metainfo/org.kde.plasma.lookandfeelexplorer.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.plasmoidviewershell.appdata.xml
 %{_datadir}/metainfo/org.kde.plasma.themeexplorer.appdata.xml
 %{_datadir}/plasma/shells/org.kde.plasma.plasmoidviewershell
@@ -150,6 +140,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.plasmoidviewer.desktop
 %{_datadir}/metainfo/org.kde.plasmaengineexplorer.appdata.xml
 %{_datadir}/metainfo/org.kde.plasmoidviewer.appdata.xml
+%{_desktopdir}/org.kde.plasma.lookandfeelexplorer.desktop
+%{_desktopdir}/org.kde.plasma.themeexplorer.desktop
 
 %lang(ca) %{_mandir}/ca/man1/kqml.1*
 %lang(ca) %{_mandir}/ca/man1/plasmaengineexplorer.1*
@@ -192,7 +184,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/iconexplorer
 %attr(755,root,root) %{_bindir}/kqml
-%attr(755,root,root) %{_libdir}/qt6/plugins/ktexteditor/iconexplorerplugin.so
 %{_desktopdir}/org.kde.iconexplorer.desktop
 %{_iconsdir}/hicolor/scalable/apps/org.kde.iconexplorer.svg
 %{_datadir}/metainfo/org.kde.plasma.iconexplorer.appdata.xml
