@@ -53,6 +53,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Applications useful for Plasma Development.
 
+%description -l pl.UTF-8
+Aplikacje przydatne przy rozwijaniu Plazmy.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 
