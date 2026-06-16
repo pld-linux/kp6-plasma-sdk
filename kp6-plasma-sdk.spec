@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.6.5
+%define		kdeplasmaver	6.7.0
 %define		qtver		5.15.2
 %define		kpname		plasma-sdk
 
 Summary:	KDE Plasma Desktop
 Name:		kp6-%{kpname}
-Version:	6.6.5
+Version:	6.7.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	b622f7d0d55d747982bf16c932384d6a
+# Source0-md5:	92f09f55d0c7aa803a7ba32379d4d571
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -95,50 +95,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/plasmathemeexplorer
 %attr(755,root,root) %{_bindir}/plasmoidviewer
 %{_libdir}/qt6/plugins/kf6/ktexteditor/iconexplorerplugin.so
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/code
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/code/openInEditor.sh
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/data
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/data/themeDescription.json
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/data/todo
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/ColorButton.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/ColorEditor.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/FormLabel.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/MetadataEditor.qml
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/Hand.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/actionbutton.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/allframesvgs.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/analog_meter.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/busyindicator.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/button.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/checkmarks.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/clock.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/containment-controls.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/dialog.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/framesvg.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/icons.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/listitem.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/monitor.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/panel.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/progressbar.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/scrollbar.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/slider.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/tabbar.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/delegates/textfield.qml
-%dir %{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/fakecontrols
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/fakecontrols/Button.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/fakecontrols/CheckBox.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/fakecontrols/LineEdit.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/main.qml
-%{_datadir}/kpackage/genericqml/org.kde.plasma.themeexplorer/metadata.json
 %{_mandir}/man1/kqml.1*
 %{_mandir}/man1/plasmaengineexplorer.1*
 %{_mandir}/man1/plasmoidviewer.1*
 %{_datadir}/metainfo/org.kde.plasma.plasmoidviewershell.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.themeexplorer.appdata.xml
 %{_datadir}/plasma/shells/org.kde.plasma.plasmoidviewershell
 %{_desktopdir}/org.kde.plasmaengineexplorer.desktop
 %{_desktopdir}/org.kde.plasmoidviewer.desktop
