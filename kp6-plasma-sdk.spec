@@ -4,18 +4,18 @@
 # TODO:
 # PackageKit qt5
 #
-%define		kdeplasmaver	6.7.5
+%define		kdeplasmaver	6.8.0
 %define		qtver		5.15.2
 %define		kpname		plasma-sdk
 
 Summary:	KDE Plasma Desktop
 Name:		kp6-%{kpname}
-Version:	6.7.5
+Version:	6.8.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	2127bc80e17fca8d2b4d6d9168d4195a
+# Source0-md5:	ec9f27531b13612513487fd8a86354eb
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -134,6 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt_BR) %{_mandir}/pt_BR/man1/kqml.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/plasmaengineexplorer.1*
 %lang(pt_BR) %{_mandir}/pt_BR/man1/plasmoidviewer.1*
+%lang(ru) %{_mandir}/ru/man1/kqml.1*
 %lang(ru) %{_mandir}/ru/man1/plasmaengineexplorer.1*
 %lang(ru) %{_mandir}/ru/man1/plasmoidviewer.1*
 %lang(sl) %{_mandir}/sl/man1/plasmaengineexplorer.1*
